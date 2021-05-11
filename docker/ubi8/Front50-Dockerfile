@@ -1,0 +1,6 @@
+RUN yum -y install java-11-openjdk-headless.x86_64 wget vim curl net-tools nettle
+RUN yum -y update
+RUN adduser spinnaker
+RUN mkdir -p /opt/front50/plugins
+USER spinnaker
+CMD ["/opt/front50/bin/front50"]
